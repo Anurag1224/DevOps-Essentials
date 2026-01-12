@@ -188,4 +188,4 @@ If you are starting with Linux:
 Feel free to fork, reuse, or suggest improvements.
 ```
 ⭐ If this repository helps you, consider starring it.
-```
+``` 
