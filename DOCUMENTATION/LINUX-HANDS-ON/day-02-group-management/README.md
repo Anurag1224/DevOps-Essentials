@@ -1,7 +1,7 @@
 # Linux Hands-On Practice – Day 2  
 ## Group Creation and User Assignment (Linux Level 1)
 
-This readme documents my **Day 2 learning** as part of my **DevOps journey**, based on hands-on Linux tasks from the **KodeKloud Engineer – Nautilus Project**.
+This repository documents my **Day 2 learning** as part of my **DevOps journey**, based on hands-on Linux tasks from the **KodeKloud Engineer – Nautilus Project**.
 
 The focus of Day 2 was understanding and implementing **group-based access control**, which is a foundational concept in enterprise Linux environments.
 
