@@ -61,10 +61,12 @@ System administrators act as the **controlled bridge** between systems.
 ### Step 1: Verify Source File Exists (on Jump Host)
 ```bash
 ls -l /tmp/nautilus.txt.gpg
+```
 
-Step 2: Transfer File to App Server 3
+### Step 2: Transfer File to App Server 3
+```bash
 scp /tmp/nautilus.txt.gpg banner@stapp03:/home/web/
-
+```
 
 This command:
 
@@ -74,106 +76,83 @@ Copies file across servers
 
 Preserves file integrity
 
-🔍 Verification Steps
-Login to App Server 3
+## 🔍 Verification Steps
+
+#### Login to App Server 3
+```bash
 ssh banner@stapp03
-
-Verify File Exists at Destination
+```
+#### Verify File Exists at Destination
+```bash
 ls -l /home/web/nautilus.txt.gpg
+```
+### Optional: Verify File Size
 
-Optional: Verify File Size
-
-On Jump Host:
-
+#### On Jump Host:
+```bash
 ls -lh /tmp/nautilus.txt.gpg
+```
 
-
-On App Server 3:
-
+#### On App Server 3:
+```bash
 ls -lh /home/web/nautilus.txt.gpg
-
+```
 
 File sizes should match.
 
-❌ Common Mistakes & Learnings
+## ❌ Common Mistakes & Learnings
+
 1️⃣ Using cp Instead of scp
 
-cp works only on the same machine
+- cp works only on the same machine
 
-Cannot transfer across servers
+- Cannot transfer across servers
 
 2️⃣ Running scp from the Wrong Server
 
-Must be executed on the source server
+- Must be executed on the source server
 
 3️⃣ Using Wrong Destination Path
 
-File must be placed exactly in /home/web/
+- File must be placed exactly in /home/web/
 
 4️⃣ Forgetting to Verify Transfer
 
-Always confirm on destination
+- Always confirm on destination
 
-🧩 Key Takeaways
+## 🧩 Key Takeaways
 
-Secure file transfer is a core system admin task
+- Secure file transfer is a core system admin task
 
-Jump Hosts are standard in enterprise security
+- Jump Hosts are standard in enterprise security
 
-scp is the simplest encrypted transfer tool
+- scp is the simplest encrypted transfer tool
 
-Verification is mandatory for sensitive data
+- Verification is mandatory for sensitive data
 
-Access control matters more than convenience
+- Access control matters more than convenience
 
-📚 Reference Documentation
+## 📚 Reference Documentation
 
 Linux manual pages:
-
+```bash
 man scp
 man ssh
-
-🚀 DevOps Journey Progress
-
-✅ Day 1 – Custom user creation
-
-✅ Day 2 – Group-based access control
-
-✅ Day 3 – Non-interactive users
-
-✅ Day 4 – Service user without home directory
-
-✅ Day 5 – Temporary user with expiry date
-
-✅ Day 6 – Ownership-based file filtering
-
-✅ Day 7 – Secure SSH access
-
-✅ Day 8 – Data archiving and transfer
-
-✅ Day 9 – Script execution permissions
-
-✅ Day 10 – File permission correction with ACL
-
-✅ Day 11 – String replacement with sed
-
-✅ Day 12 – Secure data transfer with scp
-
-📘 Focus: Linux networking & secure operations
-🎯 Goal: Strong operational Linux foundation for DevOps roles
-
-🤝 For Learners
+```
+## 🤝 For Learners
 
 If you are learning Linux system administration:
 
-Understand network boundaries
+- Understand network boundaries
 
-Always verify both ends of a transfer
+- Always verify both ends of a transfer
 
-Never move sensitive data without encryption
+- Never move sensitive data without encryption
 
-Think in terms of security-first workflows
+- Think in terms of security-first workflows
 
 Feel free to fork, reuse, or suggest improvements.
 
+```
 ⭐ If this repository helps you, consider starring it.
+```
