@@ -58,3 +58,77 @@ This command:
 - Replaces them with Maritime
 
 - Saves changes directly to the file
+
+## 🔍 Verification Steps
+
+### Check That Old String No Longer Exists
+```bash
+grep About /root/nautilus.xml
+```
+
+#### Expected result:
+```
+No output
+```
+
+#### Confirm New String Exists
+```bash
+grep Maritime /root/nautilus.xml
+```
+
+#### Expected result:
+```
+Lines containing Maritime
+```
+
+## ❌ Common Mistakes & Learnings
+
+1️⃣ Forgetting the -i Flag
+
+- Without -i, changes are not saved
+
+2️⃣ Missing the g Flag
+
+- Only replaces the first occurrence per line
+
+3️⃣ Editing Manually Instead of Automating
+
+- Manual editing is slower and error-prone
+
+- Automation ensures consistency
+
+## 🧩 Key Takeaways
+
+- sed is the standard Linux tool for automated text replacement
+
+- Non-interactive commands are preferred in DevOps workflows
+
+- Always verify changes after modification
+
+- Small text operations are critical in configuration management
+
+## 📚 Reference Documentation
+
+Linux manual pages:
+```bash
+man sed
+man grep
+```
+
+## 🤝 For Learners
+
+If you are learning Linux automation:
+
+- Prefer command-line tools over manual editing
+
+- Always verify file modifications
+
+- Learn common text tools (sed, awk, grep)
+
+- Think in terms of repeatable operations
+
+Feel free to fork, reuse, or suggest improvements.
+
+```
+⭐ If this repository helps you, consider starring it.
+```
