@@ -55,125 +55,107 @@ Therefore, organizations restrict cron usage to only **trusted users**.
 ```bash
 ssh steve@stapp02
 hostname
-```Expected output:
+```
 
+Expected output:
+```
 stapp02
+```
 
-Step 2: Allow Only mariyam to Use Cron
+### Step 2: Allow Only mariyam to Use Cron
+```bash
 sudo vi /etc/cron.allow
-
+```
 
 Add:
-
+```text
 mariyam
-
+```
 
 This ensures only users listed here can use crontab.
 
-Step 3: Explicitly Deny ryan
+### Step 3: Explicitly Deny ryan
+```bash
 sudo vi /etc/cron.deny
-
+```
 
 Add:
-
+```text
 ryan
+```
 
-🔍 Verification Steps
+## 🔍 Verification Steps
+
 Test as mariyam (Should Work)
+```bash
 su - mariyam
 crontab -e
-
+```
 
 User should be allowed to edit cron jobs.
 
 Test as ryan (Should Fail)
+```bash
 su - ryan
 crontab -e
-
+```
 
 Expected output:
-
+```
 You (ryan) are not allowed to use this program (crontab)
+```
+## ❌ Common Mistakes & Learnings
 
-❌ Common Mistakes & Learnings
 1️⃣ Editing Only cron.deny
 
-Deny list is weaker than allow list
+- Deny list is weaker than allow list
 
 2️⃣ Forgetting to Use sudo
 
-System files require root privileges
+- System files require root privileges
 
 3️⃣ Testing as Root
 
-Root is always allowed, so test must be done as real users
+- Root is always allowed, so test must be done as real users
 
 4️⃣ Not Verifying Access
 
-Always confirm behavior with crontab -e
+- Always confirm behavior with crontab -e
 
-🧩 Key Takeaways
+## 🧩 Key Takeaways
 
-Automation is powerful and must be restricted
+- Automation is powerful and must be restricted
 
-Cron access should follow a whitelist model
+- Cron access should follow a whitelist model
 
-cron.allow is more secure than cron.deny
+- cron.allow is more secure than cron.deny
 
-Testing must be done under actual user identities
+- Testing must be done under actual user identities
 
-This concept applies to all automation systems
+- This concept applies to all automation systems
 
-📚 Reference Documentation
+## 📚 Reference Documentation
 
 Linux manual pages:
-
+```
 man cron
 man crontab
+```
 
-🚀 DevOps Journey Progress
-
-✅ Day 1 – Custom user creation
-
-✅ Day 2 – Group-based access control
-
-✅ Day 3 – Non-interactive users
-
-✅ Day 4 – Service user without home directory
-
-✅ Day 5 – Temporary user with expiry date
-
-✅ Day 6 – Ownership-based file filtering
-
-✅ Day 7 – Secure SSH access
-
-✅ Day 8 – Data archiving and transfer
-
-✅ Day 9 – Script execution permissions
-
-✅ Day 10 – File permission correction with ACL
-
-✅ Day 11 – String replacement with sed
-
-✅ Day 12 – Secure data transfer with scp
-
-✅ Day 13 – Controlled cron access
-
-📘 Focus: Linux security & automation governance
-🎯 Goal: Strong operational Linux foundation for DevOps roles
-
-🤝 For Learners
+## 🤝 For Learners
 
 If you are learning Linux automation:
 
-Never allow automation tools without access control
+- Never allow automation tools without access control
 
-Always test permissions as the actual user
+- Always test permissions as the actual user
 
-Prefer allow lists over deny lists
+- Prefer allow lists over deny lists
 
-Treat automation as a security-sensitive feature
+- Treat automation as a security-sensitive feature
 
-Feel free to fork, reuse, or suggest improvements.
+- Feel free to fork, reuse, or suggest improvements.
 
+```
 ⭐ If this repository helps you, consider starring it.
+```
