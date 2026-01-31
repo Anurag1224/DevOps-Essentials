@@ -106,7 +106,7 @@ SELINUX=disabled
 
 Save and exit.
 
-🔍 Important Notes
+## 🔍 Important Notes
 
 - Do not add a new line; modify the existing one
 
