@@ -173,7 +173,7 @@ If you are learning Linux security:
 
 - Treat security changes as high-impact operations
 
-- Feel free to fork, reuse, or suggest improvements.
+Feel free to fork, reuse, or suggest improvements.
 
 ```
 ⭐ If this repository helps you, consider starring it.

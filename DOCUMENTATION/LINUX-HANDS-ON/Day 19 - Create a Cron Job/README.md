@@ -190,7 +190,7 @@ man systemctl
 
 - Verify outputs before moving to complex scripts
 
-- Feel free to fork, reuse, or suggest improvements.
+Feel free to fork, reuse, or suggest improvements.
 
 
 ```

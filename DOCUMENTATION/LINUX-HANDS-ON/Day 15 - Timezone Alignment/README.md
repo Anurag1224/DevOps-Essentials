@@ -153,7 +153,7 @@ man timedatectl
 
 - Remember that small misconfigurations can cause big issues
 
-- Feel free to fork, reuse, or suggest improvements.
+Feel free to fork, reuse, or suggest improvements.
 
 ```
 ⭐ If this repository helps you, consider starring it.

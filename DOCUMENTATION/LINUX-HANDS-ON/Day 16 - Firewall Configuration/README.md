@@ -156,7 +156,7 @@ If you are learning Linux networking:
 
 - Treat firewalls as a critical security control
 
-- Feel free to fork, reuse, or suggest improvements.
+Feel free to fork, reuse, or suggest improvements.
 
 
 ```

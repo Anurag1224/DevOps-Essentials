@@ -168,7 +168,7 @@ If you are learning Linux system administration:
 
 - Understand that stability comes from prevention, not reaction
 
-- Feel free to fork, reuse, or suggest improvements.
+Feel free to fork, reuse, or suggest improvements.
 
 ```
 ⭐ If this repository helps you, consider starring it.
