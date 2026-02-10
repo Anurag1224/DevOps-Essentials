@@ -55,72 +55,72 @@ hostname
 Repeat on all app servers.
 
 Step 2: Install zip Package
+```bash
 sudo yum install -y zip
-
+```
 
 Explanation:
 
-yum → Package manager
+- yum → Package manager
 
-install → Install software
+- install → Install software
 
--y → Auto-confirm prompts
+- -y → Auto-confirm prompts
 
 Step 3: Verify Installation
+```bash
 zip -v
-
+```
 
 Or:
-
+```bash
 rpm -qa | grep zip
+```
 
-🔍 Verification Steps
+## 🔍 Verification Steps
 
-Confirm package installation
+- Confirm package installation
 
-Ensure installation is completed on all app servers
+- Ensure installation is completed on all app servers
 
-Verify command availability
+- Verify command availability
 
-❌ Common Mistakes & Learnings
+## ❌ Common Mistakes & Learnings
 
 1️⃣ Installing on only one server
-Each server maintains its own package database.
+- Each server maintains its own package database.
 
 2️⃣ Forgetting verification
-Always confirm installation.
+- Always confirm installation.
 
 3️⃣ Running commands without confirming hostname
-Always verify target server.
+- Always verify target server.
 
-🧩 Key Takeaways
+## 🧩 Key Takeaways
 
-Package management is a fundamental system administration task
+- Package management is a fundamental system administration task
 
-Consistency across servers is critical in production environments
+- Consistency across servers is critical in production environments
 
-Always verify installations and server context
+- Always verify installations and server context
 
-📚 Reference Documentation
+## 📚 Reference Documentation
+```bash
 man yum
 man zip
+```
 
-🚀 DevOps Journey Progress
 
-✅ Linux Level 1 completed
-
-📘 Linux Level 2 in progress
-
-🎯 Focus: Package management, automation, and system operations
-
-🤝 For Learners
+## 🤝 For Learners
 
 If you are learning Linux:
 
-Always verify which server you are working on
+- Always verify which server you are working on
 
-Install packages carefully in multi-server environments
+- Install packages carefully in multi-server environments
 
-Think about consistency and reliability
+- Think about consistency and reliability
 
+```
 ⭐ If this repository helps you, consider starring it.
+```
