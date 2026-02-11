@@ -768,3 +768,4 @@ This guide covers the essential Linux commands and shell scripting concepts need
 **Version:** v1.0
 
 *For more advanced topics, refer to the additional shell scripting guide.*
+
