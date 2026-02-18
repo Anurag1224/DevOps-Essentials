@@ -218,3 +218,87 @@ If you are learning Linux administration:
 ```
 ⭐ If this repository helps you, consider starring it.
 ```
+
+----------------------------------
+
+## 🧩 Firewalld, iptables, and nftables (How They Relate)
+----------------------------------
+
+Linux firewalling has evolved over time, and it’s useful to understand the layers involved.
+
+### iptables (Legacy Firewall Framework)
+
+`iptables` was historically the primary firewall tool in Linux.
+
+It works by defining rules in chains such as:
+- INPUT
+- OUTPUT
+- FORWARD
+
+Example:
+```bash
+iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+```
+
+Limitations of iptables:
+
+- Complex rule management
+
+- Separate tools for IPv4 and IPv6
+
+- Difficult to maintain large rule sets
+
+Because of these limitations, newer systems moved to nftables.
+-------------
+
+### nftables (Modern Firewall Framework)
+
+nftables is the modern replacement for iptables.
+
+Improvements include:
+
+- Unified framework for IPv4, IPv6, ARP
+
+- Cleaner rule syntax
+
+- Better performance
+
+- Easier rule management
+
+Example:
+```bash
+nft list ruleset
+```
+
+This command shows all firewall rules currently active on the system.
+
+Modern Linux distributions often use nftables internally.
+----------
+### Where Firewalld Fits
+
+Firewalld is a high-level firewall manager.
+
+It:
+
+- Provides an easier interface
+
+- Supports zones and dynamic updates
+
+- Uses nftables internally on modern systems
+
+So the actual flow looks like:
+```
+User → firewall-cmd → firewalld → nftables → Linux kernel
+```
+This abstraction allows administrators to manage firewall rules safely without writing low-level nftables rules directly.
+-----------
+
+### Why Firewalld Is Preferred in Many Environments
+
+- Easier to manage
+
+- Supports dynamic rule changes
+
+- Reduces risk of locking yourself out
+
+- Better suited for automation and scripting
